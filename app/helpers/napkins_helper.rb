@@ -1,0 +1,2 @@
+module NapkinsHelper
+end

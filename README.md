@@ -14,6 +14,8 @@ Simple rails app that allows sharing of simple ideas, such as you might describe
 	$ rvm 2.1.2
 	$ gem install rails -v 4.1.2
 
+* Copy rake, rails, etc to ./bin?
+
 * Perform database migrations
 
 	$ bin/rake db:migrate

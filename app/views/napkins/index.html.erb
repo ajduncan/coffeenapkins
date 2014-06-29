@@ -1,0 +1,20 @@
+<h1>All napkins</h1>
+
+<%= link_to 'Jot down an idea', new_napkin_path %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+  <% @napkins.each do |napkin| %>
+    <tr>
+      <td><%= napkin.title %></td>
+      <td><%= napkin.text %></td>
+      <td><%= link_to 'View', napkin_path(napkin) %></td>
+      <td><%= link_to 'Edit', edit_napkin_path(napkin) %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'Jot down an idea', new_napkin_path %>
