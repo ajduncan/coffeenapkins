@@ -20,4 +20,10 @@ Simple rails app that allows sharing of simple ideas, such as you might describe
 
 	$ bin/rake db:migrate
 
+## Running ##
 
+To run and test:
+
+	$ bin/rails server
+
+Then see: http://localhost:3000/
