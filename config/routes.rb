@@ -1,6 +1,8 @@
 Coffeenapkins::Application.routes.draw do
 
-  resources :napkins
+  resources :napkins do
+  	resources :comments
+  end
 
   root 'welcome#index'
 end

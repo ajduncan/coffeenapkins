@@ -8,5 +8,11 @@
   <%= @napkin.text %>
 </p>
 
+<h2>Comments</h2>
+<%= render @napkin.comments %>
+
+<h2>Add a comment:</h2>
+<%= render "comments/form" %>
+
 <%= link_to 'Edit this idea', edit_napkin_path(@napkin) %><br>
 <%= link_to 'Back', napkins_path %>

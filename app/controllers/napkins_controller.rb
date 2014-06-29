@@ -1,4 +1,5 @@
 class NapkinsController < ApplicationController
+
   def new
   	@napkin = Napkin.new
   end
