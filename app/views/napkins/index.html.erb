@@ -5,7 +5,7 @@
   <tr>
     <th>Title</th>
     <th>Text</th>
-    <th colspan="2"></th>
+    <th colspan="3"></th>
   </tr>
  
   <% @napkins.each do |napkin| %>
@@ -14,6 +14,7 @@
       <td><%= napkin.text %></td>
       <td><%= link_to 'View', napkin_path(napkin) %></td>
       <td><%= link_to 'Edit', edit_napkin_path(napkin) %></td>
+      <td><%= link_to 'Delete', napkin_path(napkin), method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>

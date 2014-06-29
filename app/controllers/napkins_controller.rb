@@ -27,6 +27,13 @@ class NapkinsController < ApplicationController
   	end
   end
 
+  def destroy
+  	@napkin = Napkin.find(params[:id])
+  	@napkin.destroy
+
+  	redirect_to napkins_path
+  end
+
   def show
     @napkin = Napkin.find(params[:id])
   end
