@@ -17,3 +17,9 @@
 
 # Ignore self-installed bin?
 /bin
+
+# Ignore chef cookbooks
+/cookbooks
+
+# Ignore vagrant
+/.vagrant

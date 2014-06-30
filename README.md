@@ -28,3 +28,14 @@ To run and test:
 	$ bin/rails server
 
 Then see: http://localhost:3000/
+
+## Vagrant ##
+
+To run in vagrant:
+
+	$ curl -L https://www.opscode.com/chef/install.sh | sudo bash
+    $ sudo gem install librarian-chef
+	$ vagrant plugin install vagrant-omnibus
+	$ vagrant plugin install vagrant-librarian-chef
+	$ librarian-chef install
+	$ vagrant up
