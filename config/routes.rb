@@ -1,5 +1,6 @@
 Coffeenapkins::Application.routes.draw do
 
+  devise_for :users
   resources :napkins do
   	resources :comments
   end
