@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Coffeenapkins</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+		<title><%= full_title(yield(:title)) %></title>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= csrf_meta_tags %>
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="container">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <%= link_to 'Home', root_path, class: 'navbar-brand' %>
+		    </div>
+		    <div class="collapse navbar-collapse">
+		      <ul class="nav navbar-nav">
+		        <%= render 'layouts/navigation_links' %>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+		<p class="notice"><%= notice %></p>
+		<p class="alert"><%= alert %></p>
 
-<%= yield %>
+		<div class="container">
+		  <%= yield %>
+		</div>
 
-</body>
+	</body>
 </html>
